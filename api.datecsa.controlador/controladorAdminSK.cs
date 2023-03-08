@@ -72,6 +72,7 @@ namespace api.datecsa.controlador
                 //close the file
                 sr.Close();
                 app.Disconnect();
+                return true;
             }
             catch (Exception ex)
             {
@@ -79,6 +80,7 @@ namespace api.datecsa.controlador
                 Console.WriteLine(ex);
                 Console.ReadLine();
                 app.Disconnect();
+                return false;
             }
         }
 
