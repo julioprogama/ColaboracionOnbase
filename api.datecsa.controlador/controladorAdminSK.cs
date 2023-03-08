@@ -10,9 +10,6 @@ using api.datecsa.UnityAPI;
 using api.datecsa.unityAPI;
 using System.IO;
 
-using api.datecsa.modelo;
-using api.datecsa.UnityAPI;
-
 
 namespace api.datecsa.controlador
 {
@@ -72,6 +69,7 @@ namespace api.datecsa.controlador
                 //close the file
                 sr.Close();
                 app.Disconnect();
+                return true;
             }
             catch (Exception ex)
             {
@@ -79,6 +77,7 @@ namespace api.datecsa.controlador
                 Console.WriteLine(ex);
                 Console.ReadLine();
                 app.Disconnect();
+                return false;
             }
         }
 
@@ -91,7 +90,6 @@ namespace api.datecsa.controlador
 
         public bool Ingresar()
         {
-
             return true;
         }
     }
